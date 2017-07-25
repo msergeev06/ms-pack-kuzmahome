@@ -1,0 +1,20 @@
+.logo a:hover {
+	text-decoration: none;
+}
+.nav-header {
+	font-size: 130%;
+	font-weight: bold;
+}
+.menu-child {
+	padding-left: 15px;
+}
+.nav-sidebar {
+	padding-bottom: 10px;
+}
+.menu-index {
+	padding-bottom: 50px;
+	padding-top: 50px;
+}
+.center-block {
+	text-align: center;
+}

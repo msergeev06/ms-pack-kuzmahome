@@ -1,0 +1,4 @@
+<?php
+
+callMethod('System.OnNewMonth');
+

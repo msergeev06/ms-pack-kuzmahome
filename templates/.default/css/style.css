@@ -1,0 +1,11 @@
+.switch-on-off {
+	width: 94px;min-width: 94px;max-width: 94px;
+	height: 27px;min-height: 27px;max-height: 27px;
+	display: block;
+}
+.switch-on-off.on {
+	background: url('../images/switch_on.png') no-repeat;
+}
+.switch-on-off.off {
+	background: url('../images/switch_off.png') no-repeat;
+}
