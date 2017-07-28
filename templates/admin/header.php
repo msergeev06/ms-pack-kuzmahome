@@ -160,7 +160,7 @@ if (!$USER->isAdmin())
 				<li class="menu-child menu-setup"><a href="#">Общие настройки</a></li>
 				<li class="menu-child menu-setup"><a href="#">Звуковые файлы</a></li>
 				<li class="menu-child menu-setup"><a href="<?=$pathAdmin?>terminals/">Терминалы</a></li>
-				<li class="menu-child menu-setup"><a href="#">Текстовые файлы</a></li>
+				<li class="menu-child menu-setup"><a href="<?=$pathAdmin?>textfiles/">Текстовые файлы</a></li>
 				<li class="menu-child menu-setup"><a href="#">Пользователи</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">

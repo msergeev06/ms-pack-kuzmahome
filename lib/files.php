@@ -13,6 +13,45 @@ class Files
 	public static $ignores;
 	public static $files_copied;
 
+	public static function getTreeView ()
+	{
+		$html = '';
+		$dirTextFiles = CoreLib\Config::getConfig('DIR_TEXT_FILES');
+		$arFiles = array();
+		if (is_dir($dirTextFiles))
+		{
+			if ($dh = opendir($dirTextFiles))
+			{
+				while (($file = readdir($dh)) !== false)
+				{
+					if (!is_dir($dirTextFiles.$file) && $file != "." && $file != ".." && $file != ".htaccess")
+					{
+						$arInfo = pathinfo($dirTextFiles.$file);
+						if ($arInfo['extension']=='txt')
+						{
+							$arFiles[] = $arInfo;
+						}
+					}
+				}
+				closedir($dh);
+			}
+		}
+		//msDebug($arFiles);
+		if (!empty($arFiles))
+		{
+			$html.='<table class="table table-striped" width="100%" border="0" cellpadding="5"><tbody>';
+
+			foreach ($arFiles as $arFile)
+			{
+				$html.='<tr><td valign="top"><big><a href="add_edit.php?file='.$arFile['filename'].'">test</a></big></td></tr>';
+			}
+
+			$html.='</tbody></table>';
+		}
+
+		return $html;
+	}
+
 	public static function getDirChmod ()
 	{
 		$dirChmod = CoreLib\Config::getConfig('DIR_CHMOD');
