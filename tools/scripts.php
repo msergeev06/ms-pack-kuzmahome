@@ -5,6 +5,8 @@ use \MSergeev\Packages\Kuzmahome\Lib;
 
 if (isset($_REQUEST['id']))
 {
-	Lib\Scripts::runScript($_REQUEST['id']);
+	$scriptID = $_REQUEST['id'];
+	unset($_REQUEST['id']);
+	Lib\Scripts::runScript($scriptID,$_REQUEST);
 }
 
